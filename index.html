@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Quiz Bíblico</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+
+    <!-- Tela inicial -->
+    <div id="start-screen">
+      <img src="KoinoniaLogo.png" alt="Logo Koinonia" class="logo-img" />
+      <h1>QUIZ KOINONIA 🍷</h1>
+      <p class="welcome-msg">Seja bem-vindo ao Quiz da Koinonia! Vamo começar?!</p>
+      <button id="start-btn" class="submit-btn">Iniciar</button>
+    </div>
+
+    <!-- Tela do quiz -->
+    <div id="quiz-box" class="hidden">
+      <h2 id="question"></h2>
+      <ul id="options" class="options"></ul>
+      <button id="next-btn" class="submit-btn">Responder</button>
+    </div>
+
+    <!-- Resultado -->
+    <div id="result-box" class="hidden">
+      <h2>Você acertou <span id="score"></span> de 10 perguntas!</h2>
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
