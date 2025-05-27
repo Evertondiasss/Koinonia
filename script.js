@@ -83,7 +83,6 @@ const startScreen = document.getElementById("start-screen");
 const quizBox = document.getElementById("quiz-box");
 const startBtn = document.getElementById("start-btn");
 
-
 function loadQuestion() {
   const q = questions[currentQuestion];
   questionEl.textContent = q.question;
@@ -101,7 +100,7 @@ function loadQuestion() {
 }
 
 function showResult() {
-  document.getElementById("quiz-box").classList.add("hidden");
+  quizBox.classList.add("hidden");
   resultBox.classList.remove("hidden");
   scoreSpan.textContent = score;
 }
@@ -128,8 +127,7 @@ nextBtn.addEventListener("click", () => {
 });
 
 startBtn.addEventListener("click", () => {
-  startScreen.classList.add("hidden");
-  quizBox.classList.remove("hidden");
+  startScreen.style.display = "none";
+  quizBox.style.display = "block"
   loadQuestion();
 });
-
