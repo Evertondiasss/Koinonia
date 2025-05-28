@@ -73,15 +73,25 @@ const questions = [
 
 let currentQuestion = 0;
 let score = 0;
+let playerName = "";
 
 const questionEl = document.getElementById("question");
 const optionsEl = document.getElementById("options");
 const nextBtn = document.getElementById("next-btn");
-const resultBox = document.getElementById("result-box");
-const scoreSpan = document.getElementById("score");
-const startScreen = document.getElementById("start-screen");
-const quizBox = document.getElementById("quiz-box");
 const startBtn = document.getElementById("start-btn");
+const playerNameInput = document.getElementById("player-name");
+
+startBtn.addEventListener("click", () => {
+  if (playerNameInput.value.trim() === "") {
+    alert("Por favor, digite seu nome.");
+    return;
+  }
+
+  playerName = playerNameInput.value.trim();
+  document.getElementById("start-screen").classList.add("hidden");
+  document.getElementById("quiz-box").classList.remove("hidden");
+  loadQuestion();
+});
 
 function loadQuestion() {
   const q = questions[currentQuestion];
@@ -99,12 +109,6 @@ function loadQuestion() {
   });
 }
 
-function showResult() {
-  quizBox.classList.add("hidden");
-  resultBox.classList.remove("hidden");
-  scoreSpan.textContent = score;
-}
-
 nextBtn.addEventListener("click", () => {
   const selected = document.querySelector('input[name="option"]:checked');
   if (!selected) {
@@ -117,17 +121,62 @@ nextBtn.addEventListener("click", () => {
     score++;
   }
 
-  currentQuestion++;
-
-  if (currentQuestion < questions.length) {
-    loadQuestion();
+  if (currentQuestion === questions.length - 1) {
+    document.getElementById("quiz-box").classList.add("hidden");
+    showFinalScreen();
   } else {
-    showResult();
+    currentQuestion++;
+    loadQuestion();
   }
 });
 
-startBtn.addEventListener("click", () => {
-  startScreen.style.display = "none";
-  quizBox.style.display = "block"
-  loadQuestion();
+function showFinalScreen() {
+  fetch("https://script.google.com/macros/s/AKfycbwg-MTpctVK9_iqumk8f2amQWytzXML0LzYsjrQm_P_YcGAr5L2WI2tpucog06O7bQ5ww/exec", {
+    method: "POST",
+    body: new URLSearchParams({
+      nome: playerName,
+      pontuacao: score
+    })
+  });
+
+  if (score >= 9) {
+    document.getElementById("score-excelente").textContent = score;
+    document.getElementById("final-screen-excelente").classList.remove("hidden");
+  } else if (score >= 6) {
+    document.getElementById("score-bom").textContent = score;
+    document.getElementById("final-screen-bom").classList.remove("hidden");
+  } else {
+    document.getElementById("score-fraco").textContent = score;
+    document.getElementById("final-screen-fraco").classList.remove("hidden");
+  }
+}
+
+document.querySelectorAll("#show-ranking-btn").forEach(btn => {
+  btn.addEventListener("click", () => {
+    document.querySelectorAll(".screen").forEach(el => el.classList.add("hidden"));
+    document.getElementById("ranking-screen").classList.remove("hidden");
+
+    fetch("https://script.google.com/macros/s/AKfycbwg-MTpctVK9_iqumk8f2amQWytzXML0LzYsjrQm_P_YcGAr5L2WI2tpucog06O7bQ5ww/exec")
+      .then(res => res.json())
+      .then(data => {
+        const list = document.getElementById("ranking-list-final");
+        list.innerHTML = data
+          .slice(0, 5)
+          .map((item, i) =>
+            `<li><strong>${i + 1}º</strong> <span>${item.nome}</span><span>${item.pontuacao} pts</span></li>`
+          ).join("");
+      });
+  });
+});
+
+document.getElementById("back-btn").addEventListener("click", () => {
+  document.getElementById("ranking-screen").classList.add("hidden");
+
+  if (score >= 9) {
+    document.getElementById("final-screen-excelente").classList.remove("hidden");
+  } else if (score >= 6) {
+    document.getElementById("final-screen-bom").classList.remove("hidden");
+  } else {
+    document.getElementById("final-screen-fraco").classList.remove("hidden");
+  }
 });
