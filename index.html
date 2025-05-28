@@ -7,28 +7,63 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <div class="container">
 
-    <!-- Tela inicial -->
-    <div id="start-screen">
+  <!-- Tela inicial -->
+  <div id="start-screen" class="screen">
+    <div class="container">
       <img src="KoinoniaLogo.png" alt="Logo Koinonia" class="logo-img" />
       <h1>QUIZ KOINONIA 🍷</h1>
       <p class="welcome-msg">Seja bem-vindo ao Quiz da Koinonia! Vamo começar?!</p>
+      <input type="text" id="player-name" placeholder="Digite seu nome" class="input-name" />
       <button id="start-btn" class="submit-btn">Iniciar</button>
     </div>
+  </div>
 
-    <!-- Tela do quiz -->
-    <div id="quiz-box" class="hidden">
+  <!-- Tela do quiz -->
+  <div id="quiz-box" class="screen hidden">
+    <div class="container">
       <h2 id="question"></h2>
       <ul id="options" class="options"></ul>
       <button id="next-btn" class="submit-btn">Responder</button>
     </div>
+  </div>
 
-    <!-- Resultado -->
-    <div id="result-box" class="hidden">
-      <h2>Você acertou <span id="score"></span> de 10 perguntas!</h2>
+  <!-- Telas finais -->
+  <div id="final-screen-excelente" class="screen hidden">
+    <div class="container">
+      <h2>Uau! Você mandou muito bem! 🎉</h2>
+      <p>Você acertou <span id="score-excelente"></span> de 10 perguntas!</p>
+      <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
+      <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
     </div>
+  </div>
 
+  <div id="final-screen-bom" class="screen hidden">
+    <div class="container">
+      <h2>Quase lá! 👏</h2>
+      <p>Você acertou <span id="score-bom"></span> de 10 perguntas!</p>
+      <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
+      <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
+    </div>
+  </div>
+
+  <div id="final-screen-fraco" class="screen hidden">
+    <div class="container">
+      <h2>Ops! Bora estudar mais a Bíblia 📖</h2>
+      <p>Você acertou <span id="score-fraco"></span> de 10 perguntas!</p>
+      <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
+      <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
+    </div>
+  </div>
+
+  <!-- Tela de Ranking -->
+  <div id="ranking-screen" class="screen hidden">
+    <div class="ranking-container">
+      <h1 class="ranking-title">🏆 RANKING DO QUIZ</h1>
+      <p class="ranking-subtitle">Veja os melhores resultados:</p>
+      <ul id="ranking-list-final" class="ranking-list ranking-block"></ul>
+      <button id="back-btn" class="submit-btn">Voltar</button>
+    </div>
   </div>
 
   <script src="script.js"></script>
