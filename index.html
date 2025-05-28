@@ -35,6 +35,7 @@
       <p>Você acertou <span id="score-excelente"></span> de 10 perguntas!</p>
       <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
       <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
+      <button id="show-review-btn" class="submit-btn">Ver Detalhes das Respostas</button>
     </div>
   </div>
 
@@ -44,6 +45,7 @@
       <p>Você acertou <span id="score-bom"></span> de 10 perguntas!</p>
       <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
       <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
+      <button id="show-review-btn" class="submit-btn">Ver Detalhes das Respostas</button>
     </div>
   </div>
 
@@ -53,6 +55,7 @@
       <p>Você acertou <span id="score-fraco"></span> de 10 perguntas!</p>
       <img src="KoinoniaLogo.png" alt="Imagem final" class="final-img" />
       <button id="show-ranking-btn" class="submit-btn">Ver o Ranking</button>
+      <button id="show-review-btn" class="submit-btn">Ver Detalhes das Respostas</button>
     </div>
   </div>
 
@@ -63,6 +66,15 @@
       <p class="ranking-subtitle">Veja os melhores resultados:</p>
       <ul id="ranking-list-final" class="ranking-list ranking-block"></ul>
       <button id="back-btn" class="submit-btn">Voltar</button>
+    </div>
+  </div>
+
+  <!-- Tela de Revisão -->
+  <div id="review-screen" class="screen hidden">
+    <div class="review-container">
+      <h1 class="ranking-title">📋 DETALHES DAS RESPOSTAS</h1>
+      <div id="review-list"></div>
+      <button id="back-to-final-btn" class="submit-btn">Voltar</button>
     </div>
   </div>
 
