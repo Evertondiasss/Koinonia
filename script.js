@@ -1,12 +1,13 @@
 const questions = [
   {
-    question: "1. Em Gênesis 1:28, Deus dá cinco ordens ao homem. Quais são essas ordens e o que elas significam em termos de domínio sobre a criação?",
+    question: "1. Deus dá cinco ordens ao homem. Quais são essas ordens e o que elas significam em termos de domínio sobre a criação?",
     options: [
       "Cuidem do Éden e obedeçam aos mandamentos", 
       "Dominem sobre os animais e cultivem a terra", 
       "Frutificai, multiplicai-vos, enchei a terra, sujeitai-a, dominai sobre os peixes", 
       "Andem com Deus e sirvam-no com alegria"
     ],
+    explanation: "Gênesis 1:28 — Frutificai, multiplicai-vos, enchei a terra, sujeitai-a e dominai sobre os peixes do mar.",
     answer: 2
   },
   {
@@ -17,17 +18,19 @@ const questions = [
       "Luz, separação, nomeação e aprovação; dias 1, 2, 5", 
       "Haja luz, houve luz, separou a luz e houve tarde e manhã; dias 1, 2 e 3"
     ],
+    explanation: "Gênesis 1:3-31 — Comando, execução, avaliação e encerramento aparecem nos dias 1, 3, 4 e 6.",
     answer: 1
   },
   {
-    question: "3. Em Gênesis 2, qual o significado do nome que Adão dá à mulher e qual o princípio estabelecido no versículo 24?",
+    question: "3. Qual o significado do nome que Adão dá à mulher e qual o princípio estabelecido no versículo 24?",
     options: [
       "Chamada Eva por ser mãe de todos; igualdade entre sexos", 
-      "Mulher por ter sido tirada do homem; união de uma só carne", 
       "Ajuda idônea; submissão ao marido", 
-      "Adoná; obediência ao Criador"
+      "Adoná; obediência ao Criador",
+      "Mulher por ter sido tirada do homem; união de uma só carne", 
     ],
-    answer: 1
+    explanation: "Gênesis 2:23-24 — Ela será chamada mulher, e os dois se tornarão uma só carne.",
+    answer: 3
   },
   {
     question: "4. Qual era o estado emocional e físico do homem e da mulher antes da queda, conforme o versículo final do capítulo 2?",
@@ -37,26 +40,29 @@ const questions = [
       "Nus e sem vergonha — símbolo de inocência", 
       "Vestidos com folhas de figueira e inocentes"
     ],
+    explanation: "Gênesis 2:25 — Estavam nus e não se envergonhavam.",
     answer: 2
   },
   {
-    question: "5. Em Gênesis 3:6, quais foram as três percepções de Eva ao olhar para o fruto antes de comer?",
+    question: "5. Quais foram as três percepções de Eva ao olhar para o fruto antes de comer?",
     options: [
+      "Boa para comer, agradável aos olhos, desejável para dar entendimento.",
       "Colorido, cheiroso e grande", 
       "Bom para o estômago, fácil de colher, diferente dos outros", 
-      "Agradável para os olhos, bom para comer e desejável para dar sabedoria", 
       "Atraente, brilhante e pesado"
     ],
-    answer: 2
+    explanation: "Gênesis 3:6 — Boa para comer, agradável aos olhos, desejável para dar entendimento.",
+    answer: 0
   },
   {
     question: "6. Qual foi a maldição dada à serpente, à mulher e ao homem, respectivamente?",
     options: [
       "Ser muda, parir com dor, morrer cedo", 
-      "Comer pó, dores na gravidez, trabalho árduo", 
+      "Rastejar e comer pó, dores na gravidez, trabalho árduo", 
       "Perder os membros, gerar filhos, plantar espinhos", 
       "Virar pó, parir gêmeos, morrer lentamente"
     ],
+    explanation: "Gênesis 3:14-19 — Serpente rasteja, mulher sofre dores, homem trabalha com fadiga.",
     answer: 1
   },
   {
@@ -67,57 +73,63 @@ const questions = [
       "Onde está teu irmão?", 
       "Oferece outro sacrifício e será aceito"
     ],
+    explanation: "Gênesis 4:6-7 — Por que estás irado? O pecado jaz à porta, cumpre a ti dominá-lo.",
     answer: 1
   },
   {
     question: "8. Qual foi a punição de Caim e a marca de misericórdia que Deus lhe deu?",
     options: [
-      "Fugiu para uma caverna; Deus mandou um anjo", 
+      "Fugiu para uma caverna e Deus mandou um anjo", 
       "Foi exilado e perdeu a fala", 
       "Se tornou fugitivo e Deus o marcou para não ser morto", 
       "Recebeu lepra e foi escondido"
     ],
+    explanation: "Gênesis 4:12-15 — Serás fugitivo e errante; Deus colocou um sinal para que não fosse morto.",
     answer: 2
   },
   {
-    question: "9. Quem foi Enoque, qual seu diferencial e com quantos anos foi levado por Deus?",
+    question: "9. Qual o diferencial de Enoque e com quantos anos foi levado por Deus?",
     options: [
-      "Sacerdote justo, morreu com 300 anos", 
-      "Homem de fé, viveu 900 anos", 
+      "Sacerdote justo e morreu com 300 anos", 
+      "Homem de fé e viveu 900 anos", 
       "Andou com Deus e foi levado com 365 anos", 
-      "Construtor da arca, desapareceu com 400 anos"
+      "Andou com Deus e desapareceu com 300 anos"
     ],
+    explanation: "Gênesis 5:24 — Enoque andou com Deus e foi levado por Ele.",
     answer: 2
   },
   {
     question: "10. Quais são os três descendentes diretos entre Adão e Noé após Sete?",
     options: [
-      "Enos, Quenã, Maalalel", 
       "Cainã, Lameque, Matusalém", 
       "Sem, Cam, Jafé", 
-      "Enoque, Noé, Quenã"
+      "Enoque, Noé, Quenã",
+      "Enos, Quenã, Maalalel"
     ],
-    answer: 0
+    explanation: "Gênesis 5:9-17 — Enos gerou Quenã, Quenã gerou Maalalel.",
+    answer: 3
   },
   {
     question: "11. Que significado Lameque atribuiu ao nome Noé e o que isso revela sobre a terra?",
     options: [
+      "Consolo — diante da terra amaldiçoada",
       "Paz — a terra prosperaria", 
-      "Consolo — terra estava amaldiçoada", 
       "Força — o homem dominaria", 
       "Esperança — o mundo seria restaurado"
     ],
-    answer: 1
+    explanation: "Gênesis 5:29 — Lameque chamou Noé de ‘Consolo’ pela maldição da terra.",
+    answer: 0
   },
   {
     question: "12. Quem eram os 'filhos de Deus' e o que resultou da união com as 'filhas dos homens'?",
     options: [
       "Anjos e humanas; nasceram reis", 
       "Homens de fé e mulheres perversas; geraram pastores", 
-      "Descendentes de Sete e Caim; surgiram gigantes e corrupção", 
-      "Homens e anjos caídos; houve terremotos"
+      "Homens e anjos caídos; houve terremotos",
+      "Descendentes de Sete e Caim; surgiram gigantes e corrupção"
     ],
-    answer: 2
+    explanation: "Gênesis 6:2,4 — Filhos de Deus com filhas dos homens; surgiram gigantes e corrupção.",
+    answer: 3
   },
   {
     question: "13. Quais as medidas e materiais da arca conforme Deus ordenou?",
@@ -127,6 +139,7 @@ const questions = [
       "300x50x30 côvados; cipreste e betume", 
       "100x100x100 metros; concreto e ferro"
     ],
+    explanation: "Gênesis 6:14-15 — Arca de cipreste com 300x50x30 côvados, betumada por dentro e por fora.",
     answer: 2
   },
   {
@@ -137,6 +150,7 @@ const questions = [
       "Deus — soberania e proteção divina", 
       "Um anjo — julgamento eterno"
     ],
+    explanation: "Gênesis 7:16 — O Senhor fechou a porta da arca.",
     answer: 2
   },
   {
@@ -147,17 +161,19 @@ const questions = [
       "30 côvados — justiça divina", 
       "5 côvados — punição leve"
     ],
+    explanation: "Gênesis 7:20 — As águas subiram 15 côvados acima das montanhas.",
     answer: 1
   },
   {
     question: "16. Quantas vezes Noé enviou a pomba e qual o sinal de que a terra estava seca?",
     options: [
+      "3 vezes; não voltar indicou terra seca",
       "2 vezes; trouxe ramo de figueira", 
-      "3 vezes; não voltou na última", 
       "1 vez; voltou com folha de oliveira", 
       "4 vezes; ficou sobre a arca"
     ],
-    answer: 1
+    explanation: "Gênesis 8:8-12 — A pomba foi enviada três vezes; não voltar indicou terra seca.",
+    answer: 0
   },
   {
     question: "17. Qual foi a primeira atitude de Noé ao sair da arca e o que Deus prometeu depois?",
@@ -167,6 +183,7 @@ const questions = [
       "Plantou vinha; Deus prometeu paz", 
       "Fez altar; Deus prometeu vida longa"
     ],
+    explanation: "Gênesis 8:20-21 — Noé ofereceu sacrifício e Deus prometeu não amaldiçoar mais a terra.",
     answer: 1
   },
   {
@@ -177,27 +194,30 @@ const questions = [
       "Comer carne sem sangue; reafirma domínio humano", 
       "Somente vegetais e frutas"
     ],
+    explanation: "Gênesis 9:3-4 — Tudo o que vive servirá de alimento, mas não comam carne com sangue.",
     answer: 2
   },
   {
     question: "19. Qual foi o pecado de Cam, a atitude de Sem e Jafé, e a consequência declarada por Noé?",
     options: [
-      "Cam zombou; Sem e Jafé cobriram Noé; Canaã foi amaldiçoado", 
+      "Cam desrespeitou Noé; Sem e Jafé cobriram Noé; Canaã foi amaldiçoado", 
       "Cam roubou; Sem orou e Jafé fugiu; Cam foi expulso", 
       "Cam matou um irmão; Sem e Jafé choraram; terra foi dividida", 
       "Cam gritou; Sem e Jafé fugiram; dilúvio voltou"
     ],
+    explanation: "Gênesis 9:22-25 — Cam viu a nudez de Noé; Sem e Jafé o cobriram; Canaã foi amaldiçoado.",
     answer: 0
   },
   {
     question: "20. Quantos filhos teve Jafé e quais povos vieram dele?",
     options: [
-      "7 filhos; originaram povos europeus e asiáticos", 
       "12 filhos; formaram tribos de Israel", 
       "3 filhos; deram origem aos cananeus", 
-      "5 filhos; habitaram na Mesopotâmia"
+      "5 filhos; habitaram na Mesopotâmia",
+      "7 filhos; originaram povos europeus e asiáticos"
     ],
-    answer: 0
+    explanation: "Gênesis 10:2 — Jafé teve sete filhos, origem dos povos europeus e asiáticos.",
+    answer: 3
   },
   {
     question: "21. Qual o significado do nome de Pelegue e o que aconteceu em seus dias?",
@@ -207,6 +227,7 @@ const questions = [
       "Glória; Deus apareceu", 
       "Força; humanidade unificada"
     ],
+    explanation: "Gênesis 10:25 — Em seus dias se repartiu a terra; por isso o nome Pelegue.",
     answer: 0
   },
   {
@@ -217,6 +238,7 @@ const questions = [
       "Exaltar a si; Deus confundiu as línguas", 
       "Buscar o céu; Deus mandou o dilúvio de novo"
     ],
+    explanation: "Gênesis 11:4-7 — Fizeram uma torre para se exaltarem; Deus confundiu as línguas.",
     answer: 2
   },
   {
@@ -227,6 +249,7 @@ const questions = [
       "Saiu de Babel para Jerusalém", 
       "Foi de Canaã para Sodoma"
     ],
+    explanation: "Gênesis 11:31 — Terá partiu de Ur para Canaã, mas habitou em Harã.",
     answer: 1
   }
 ];
